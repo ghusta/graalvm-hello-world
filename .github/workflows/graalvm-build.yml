@@ -23,7 +23,7 @@ jobs:
         run: mvn -v
 
       - name: Display Gradle version
-        run: gradle -v
+        run: gradle -v --quiet
 
       - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn -Pnative package
