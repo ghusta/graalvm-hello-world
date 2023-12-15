@@ -18,8 +18,12 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           java --version
           native-image --version
-          mvn -v
-          gradle -v
+
+      - name: Display Maven version
+        run: mvn -v
+
+      - name: Display Gradle version
+        run: gradle -v
 
       - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn -Pnative package
