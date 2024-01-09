@@ -17,6 +17,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           native-image-job-reports: 'true'
 
+      # These are the same steps as shown here : https://www.graalvm.org/latest/docs/getting-started/
       - name: Build and run HelloWorld.java
         run: |
           javac -sourcepath ./src/main/java ./src/main/java/HelloWorld.java -d out
